@@ -1,0 +1,31 @@
+body {
+    font-family: 'Arial', sans-serif; 
+    background-color: #f0f0f0; 
+    margin: 20px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px; 
+    background-color: #e6e6e6; /
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 10px; /* Set cellpadding */
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #cccccc; 
+    font-weight: bold;
+}
+
+.schedule-table td {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.schedule-table, .schedule-table th, .schedule-table td {
+    border: none; 
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Buttons and Scrolling Menus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            margin: 5px 0;
+            padding: 5px;
+            font-size: 16px;
+            width: 150px; /* Adjust width as needed */
+        }
+
+        .button-container {
+            margin-top: 10px;
+        }
+
+        .button-container button {
+            margin-right: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu Buttons and Scrolling Menus</h1>
+
+    <!-- Title Menu Buttons -->
+    <label for="title">Title:</label>
+    <div class="button-container">
+        <button onclick="setTitle('Mr')">Mr</button>
+        <button onclick="setTitle('Mrs')">Mrs</button>
+        <button onclick="setTitle('Miss')">Miss</button>
+        <button onclick="setTitle('Ms')">Ms</button>
+        <button onclick="setTitle('Dr')">Dr</button>
+    </div>
+
+    <!-- Age Menu Buttons -->
+    <label for="age">Age:</label>
+    <div class="button-container">
+        <button onclick="setAge('<19')">under 20 (&lt;19)</button>
+        <button onclick="setAge('20—29')">20—29</button>
+        <button onclick="setAge('30—39')">30—39</button>
+        <button onclick="setAge('40—49')">40—49</button>
+        <button onclick="setAge('50—59')">50—59</button>
+        <button onclick="setAge('60>')">over 60 (60>)</button>
+    </div>
+
+    <!-- Gender Menu Buttons -->
+    <label for="gender">Gender:</label>
+    <div class="button-container">
+        <button onclick="setGender('Male')">Male</button>
+        <button onclick="setGender('Female')">Female</button>
+    </div>
+
+    <!-- Status Menu Buttons -->
+    <label for="status">Status:</label>
+    <div class="button-container">
+        <button onclick="setStatus('Employed')">Employed</button>
+        <button onclick="setStatus('Unemployed')">Unemployed</button>
+        <button onclick="setStatus('Student')">Student</button>
+    </div>
+
+    <hr>
+
+    <!-- Scrolling Menus for Date of Birth -->
+    <h2>Date of Birth</h2>
+    <label for="dobDay">Day:</label>
+    <select id="dobDay">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <label for="dobMonth">Month:</label>
+    <select id="dobMonth">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+
+    <label for="dobYear">Year:</label>
+    <select id="dobYear">
+        <option value="1960">1960</option>
+        <option value="1961">1961</option>
+        <option value="1962">1962</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <script>
+        function setTitle(title) {
+            console.log("Selected Title:", title);
+            // Perform any action needed with the selected title
+        }
+
+        function setAge(ageRange) {
+            console.log("Selected Age:", ageRange);
+            // Perform any action needed with the selected age range
+        }
+
+        function setGender(gender) {
+            console.log("Selected Gender:", gender);
+            // Perform any action needed with the selected gender
+        }
+
+        function setStatus(status) {
+            console.log("Selected Status:", status);
+            // Perform any action needed with the selected status
+        }
+    </script>
+</body>
+</html>

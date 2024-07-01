@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        button {
+            margin: 5px;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 10:</p>
+    <input type="number" id="userGuess" min="1" max="10">
+    <button onclick="checkGuess()">Check Guess</button>
+    <div id="result"></div>
+
+    <script>
+        function checkGuess() {
+            // Generate a random number between 1 and 10
+            var randomNumber = Math.floor(Math.random() * 10) + 1;
+
+            // Get the user's guess from the input field
+            var userGuess = parseInt(document.getElementById("userGuess").value);
+
+            // Check if the user's guess matches the random number
+            if (userGuess === randomNumber) {
+                document.getElementById("result").innerHTML = "Good Work!";
+            } else {
+                document.getElementById("result").innerHTML = "Not matched. The correct number was " + randomNumber + ".";
+            }
+        }
+    </script>
+</body>
+</html>

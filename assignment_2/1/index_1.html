@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Airline Destinations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            margin: 10px 0;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Egyptian Airline Destinations</h1>
+    <label for="destinations">Select Destination:</label>
+    <select id="destinations">
+        <option value="">Select...</option>
+        <optgroup label="External Flights">
+            <option value="Kuwait">Kuwait</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Oman">Oman</option>
+        </optgroup>
+        <optgroup label="Internal Flights">
+            <option value="Cairo">Cairo</option>
+            <option value="Alexandria">Alexandria</option>
+            <option value="Luxor">Luxor</option>
+            <option value="Aswan">Aswan</option>
+            <option value="Hurghada">Hurghada</option>
+            <option value="Sharm El Sheikh">Sharm El Sheikh</option>
+        </optgroup>
+    </select>
+    <button onclick="redirectToDestination()">Go to Destination</button>
+
+    <div id="result"></div>
+
+    <script>
+        function redirectToDestination() {
+            var selectedDestination = document.getElementById("destinations").value;
+            if (selectedDestination) {
+                // You can redirect to the selected destination's page or show a message
+                document.getElementById("result").innerHTML = "Redirecting to " + selectedDestination + " page...";
+            } else {
+                document.getElementById("result").innerHTML = "Please select a destination.";
+            }
+        }
+    </script>
+</body>
+</html>

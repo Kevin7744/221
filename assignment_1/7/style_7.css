@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif; /* Set a favorable font family */
+    background-color: #f0f0f0; /* Set a light background color */
+    margin: 20px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Set a background color for the table */
+    margin: 0 auto; /* Center the table on the page */
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #000; /* Set border for table cells */
+    padding: 10px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #e6e6e6; /* Set a different background color for headers */
+    font-weight: bold;
+}
+
+.schedule-table td {
+    height: 50px;
+    vertical-align: middle;
+}

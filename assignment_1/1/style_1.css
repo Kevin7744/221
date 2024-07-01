@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.movie-reviews {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+}
+
+.movie-reviews h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.movie-reviews ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.movie-reviews li {
+    font-size: 1.2em;
+    padding: 5px 0;
+}

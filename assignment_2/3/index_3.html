@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit and Reset Buttons with Form Encoding Test</title>
+</head>
+<body>
+    <h1>Personal Interests</h1>
+
+    <form action="mailto:your-email@example.com" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Select your interests:</legend>
+            <label><input type="checkbox" name="interests" value="sports"> Sports</label><br>
+            <label><input type="checkbox" name="interests" value="music"> Music</label><br>
+            <label><input type="checkbox" name="interests" value="books"> Books</label><br>
+            <label><input type="checkbox" name="interests" value="movies"> Movies</label><br>
+            <label><input type="checkbox" name="interests" value="travel"> Travel</label><br>
+        </fieldset>
+
+        <br>
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+</html>

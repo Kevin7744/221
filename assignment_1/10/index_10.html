@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        button {
+            margin: 5px;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grade Checker</h1>
+    <label for="totalMarks">Total Marks:</label>
+    <input type="number" id="totalMarks" value="0"><br>
+    <label for="examType">Examination Type:</label>
+    <select id="examType">
+        <option value="regular">Regular</option>
+        <option value="Final-exam">Final-exam</option>
+    </select><br>
+    <button onclick="checkGrade()">Check Grade</button>
+    <div id="result"></div>
+
+    <script>
+        function checkGrade() {
+            // Get the values from the input fields
+            var totalMarks = document.getElementById("totalMarks").value;
+            var examType = document.getElementById("examType").value;
+
+            // Parse the totalMarks as a float
+            totalMarks = parseFloat(totalMarks);
+
+            // Function to check if the student gets an A+ grade
+            function getAPlusGrade(totalMarks, examType) {
+                if (examType === "Final-exam") {
+                    return totalMarks >= 90 && totalMarks <= 100;
+                } else {
+                    return totalMarks >= 89 && totalMarks <= 100;
+                }
+            }
+
+            // Check the grade and display the result
+            var result = getAPlusGrade(totalMarks, examType);
+            document.getElementById("result").innerHTML = result ? "The student gets an A+ grade." : "The student does not get an A+ grade.";
+        }
+    </script>
+</body>
+</html>

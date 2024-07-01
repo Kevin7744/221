@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iDaTos Technologies Job Application</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        textarea, input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        input[type="date"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        input[type="range"] {
+            width: 100%;
+            margin-top: 5px;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form action="mailto:your-email@example.com" method="post">
+
+        <label for="position">Position Applied For:</label>
+        <input type="text" id="position" name="position" autofocus required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="telephone">Telephone Number:</label>
+        <input type="tel" id="telephone" name="telephone" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <h2>Educational History and Qualifications:</h2>
+        <textarea id="education" name="education"></textarea>
+
+        <h2>Work Experience / Employment / Training:</h2>
+        <label for="experience">Years of Experience:</label>
+        <input type="range" id="experience" name="experience" min="0" max="10" value="0" step="1">
+        <output for="experience" id="expValue">0 years</output>
+
+        <h2>Personal Statement:</h2>
+        <textarea id="statement" name="statement"></textarea>
+
+        <h2>Referees:</h2>
+        <h3>Referee 1:</h3>
+        <label for="referee1_name">Name:</label>
+        <input type="text" id="referee1_name" name="referee1_name">
+        <label for="referee1_occupation">Occupation:</label>
+        <input type="text" id="referee1_occupation" name="referee1_occupation">
+        <label for="referee1_relationship">Relationship:</label>
+        <input type="text" id="referee1_relationship" name="referee1_relationship">
+        <label for="referee1_address">Address:</label>
+        <textarea id="referee1_address" name="referee1_address"></textarea>
+        <label for="referee1_telephone">Telephone:</label>
+        <input type="tel" id="referee1_telephone" name="referee1_telephone">
+
+        <h3>Referee 2:</h3>
+        <label for="referee2_name">Name:</label>
+        <input type="text" id="referee2_name" name="referee2_name">
+        <label for="referee2_occupation">Occupation:</label>
+        <input type="text" id="referee2_occupation" name="referee2_occupation">
+        <label for="referee2_relationship">Relationship:</label>
+        <input type="text" id="referee2_relationship" name="referee2_relationship">
+        <label for="referee2_address">Address:</label>
+        <textarea id="referee2_address" name="referee2_address"></textarea>
+        <label for="referee2_telephone">Telephone:</label>
+        <input type="tel" id="referee2_telephone" name="referee2_telephone">
+
+        <button type="submit">Submit Application</button>
+        <button type="reset">Reset Form</button>
+
+    </form>
+
+    <script>
+        // Display current value of range input
+        document.getElementById('experience').addEventListener('input', function() {
+            document.getElementById('expValue').textContent = this.value + ' years';
+        });
+    </script>
+
+</body>
+</html>
